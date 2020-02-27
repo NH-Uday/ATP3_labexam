@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Home page</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<h1 style="color:Tomato;" >Welcome to Computer Shop</h1>
+
+<h3>want to buy anything</h3>
+	<table style="width:100%; border-style:dashed;">
+	<tr style="color:black">
+	 <th> <a href="/product/casing">Casing</a> </th>
+	 <th> <a href="/product/storage">Storage</a> </th>
+	 <th> <a href="/product/monitor">Monitor</a> </th>
+	 <th> <a href="/product/laptop">laptop</a> </th>
+	</tr>
+  </table>
+	</br>
+	<h3>our popular product</h3> <br>
+
+	<table border="0">
+
+	<% for(var i=0; i< 4; i++){ %>
+		<tr>
+			
+			<tr>
+			
+			
+			<td><%= user[i].name %></td></tr>
+			<tr>
+				<td>price:</td>
+			<td><%= user[i].price %></td></tr>
+			<tr>
+				<td>Brand</td>
+				<td><%= user[i].cname %></td></tr>
+			<tr><td><%= user[i].description %></td>
+
+		
+			<td>
+				<a href="/user/cart/<%= user[i].id %>">Add to cart  </a> | 
+				<a href="/review">review</a>
+			</td>
+		</tr>
+		
+			
+	<% } %>
+	</table>
+
+	<a href="/logout">logout</a>
+
+</body>
+</html>
